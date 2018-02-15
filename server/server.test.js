@@ -12,8 +12,8 @@ it('should test response',(done)=>{
 
   request(app).get('/')
               .expect(404)
-              .expect((res) =>{
-                expect(res.body).toInclude({
+              .expect((res) =>{   //instead of dirct argumnet expect is taking
+                expect(res.body).toInclude({ // a function that will do assertions
                   name: "Pranav"
                 });
              })
